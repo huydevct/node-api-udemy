@@ -11,7 +11,7 @@ main {
 .main-header {
   width: 100%;
   height: 3.5rem;
-  background-color: #dbc441;
+  background-color: #2b6148;
   padding: 0;
 }
 
@@ -35,7 +35,7 @@ main {
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
-  color: #620062;
+  color: #faf4fa;
 }
 
 .main-header__nav {

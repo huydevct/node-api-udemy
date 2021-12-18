@@ -1,0 +1,22 @@
+<main>
+  {{#if hasProduct}}
+    {{#each prods}}
+      <div class="card" style="width: 18rem;">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tQWWvN-f8BUn8rB5SzcUnvoNJRWkY5zKUA&usqp=CAU"
+          class="card-img-top"
+          alt="A Book"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{this.title}}</h5>
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <h2>$19.99</h2>
+          <a href="/" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <h1>No Products</h1>
+  {{/if}}
+</main>

@@ -1,0 +1,28 @@
+extends layouts/main-layout.pug
+
+block content
+    main 
+        if prods.length > 0
+            .grid 
+                each product in prods
+                    .card(style="width: 18rem;")
+                        img.card-img-top(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tQWWvN-f8BUn8rB5SzcUnvoNJRWkY5zKUA&usqp=CAU", alt="A Book")
+                        .card-body
+                            h5.card-title #{product.title}
+                            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                            h2.ms-5 $19.99
+                            a.btn.btn-primary.ms-5(href="/") Add to Cart
+        else 
+            h1  No Products
+
+
+            //- article.card.product-item
+            //-     header.card__header 
+            //-         h1.product__title #{product.title}
+            //-     div.card__image 
+            //-         img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1tQWWvN-f8BUn8rB5SzcUnvoNJRWkY5zKUA&usqp=CAU" alt="A Book")
+            //-     div.card-content
+            //-         h2.product__price $19.99
+            //-         p.product__description A very interesting book about so many even more things 
+            //-     .card__actions
+            //-         button.btn Add to Cart
