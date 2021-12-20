@@ -5,6 +5,8 @@ const { engine } = require("express-handlebars");
 const app = express();
 const errorController = require("./controllers/error");
 
+// const db = require("./util/database");
+
 // app.engine(
 //   "hbs",
 //   engine({
@@ -20,6 +22,14 @@ app.set("views", "views");
 
 const adminRoutes = require("./routes/admin");
 const shopRouter = require("./routes/shop");
+
+// db.execute("SELECT * FROM products")
+//   .then((result) => {
+//     console.log(result[0], result[1]);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));

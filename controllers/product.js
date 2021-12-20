@@ -11,9 +11,19 @@ exports.getAddProduct = (req, res, next) => {
 
 exports.postAddProduct = (req, res, next) => {
   // products.push({ title: req.body.title });
-  const product = new Product(req.body.title);
-  product.save();
-  res.redirect("/");
+  const title = req.body.title;
+  const description = req.body.description;
+  const imageUrl = req.body.imageUrl;
+  const price = req.body.price;
+  const product = new Product(null, title, imageUrl, description, price);
+  product
+    .save()
+    .then(() => {
+      res.redirect("/");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 exports.getProducts = (req, res, next) => {
